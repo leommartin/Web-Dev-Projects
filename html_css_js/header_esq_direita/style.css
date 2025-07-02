@@ -1,0 +1,30 @@
+body{
+    background-color: black;
+    color: white;
+    margin: px;
+}
+
+.topo {
+  display: flex;
+  justify-content: space-between; /* separa título e menu, espaça o máximo que conseguir */
+  align-items: center; /* centraliza verticalmente */
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
+
+.titulo {
+  margin: 0;
+}
+
+.menu {
+  display: flex;
+  gap: 20px; /* espaçamento entre os links */
+  margin-right: 20px; /* distância o nav do canto direito */
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
