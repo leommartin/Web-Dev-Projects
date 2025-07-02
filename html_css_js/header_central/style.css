@@ -1,0 +1,33 @@
+body{
+    background-color: black;
+    color: white;
+    margin: px;
+}
+
+.topo {
+  position: relative;
+  height: 60px;
+  background-color: #333;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.titulo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  margin: 0;
+}
+
+.menu {
+  margin-left: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
