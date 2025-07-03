@@ -8,6 +8,7 @@ body{
   position: relative;
   height: 60px;
   background-color: #333;
+  border: 3px solid red;
   padding: 20px;
   display: flex;
   align-items: center;
@@ -19,15 +20,18 @@ body{
   transform: translateX(-50%);
   color: white;
   margin: 0;
+  border: 3px solid red;
 }
 
 .menu {
-  margin-left: auto;
+  margin-left: auto; /* empurra o menu para a direita */
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  border: 3px solid red;
 }
 
 .menu a {
   color: white;
   text-decoration: none;
+  border: 3px solid red;
 }
