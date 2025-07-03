@@ -1,0 +1,41 @@
+body {
+  background-color: #222;
+  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.topo {
+  text-align: center;
+  padding: 20px;
+  background-color: #444;
+}
+
+.conteudo {
+  padding: 40px;
+  border: 5px solid white;
+}
+
+.container {
+  display: flex;           
+  gap: 20px;               /* Espaço entre os quadrados */
+  flex-wrap: wrap;         /* Permite quebrar linha */
+  justify-content: center; /* Alinha horizontalmente */
+  /* flex-direction: column; */
+  max-height: 600px;
+  align-items: center;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: teal;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  font-size: 24px;
+  color: white;
+  border: 2px solid white;
+  /* border-radius: 8px; */
+  /* flex:1; */ /* Isso faz com que os quadrados cresçam para ocupar o espaço disponível */
+}
