@@ -1,0 +1,106 @@
+body {
+  background-color: #222;
+  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.topo {
+  text-align: center;
+  padding: 20px;
+  background-color: #444;
+}
+
+.conteudo {
+  padding: 20px;
+  border: 5px solid white;
+}
+
+.pagina {
+  display: flex;
+}
+
+.filtros {
+  width: 15%;
+  background-color: #333;
+  padding: 10px 20px;
+  /* border:solid 2px white; */
+}
+
+.filtros p{
+  cursor:pointer;
+}
+/* .filtros h2{
+  margin: 0;
+} */
+
+.produtos {
+  width: 70%;
+}
+
+.espaco-vazio {
+  width: 15%;
+}
+
+.container {
+  display: flex;           
+  gap: 20px;               /* Espaço entre os quadrados */
+  flex-wrap: wrap;         /* Permite quebrar linha */
+  justify-content: center; /* Alinha horizontalmente */
+  /* flex-direction: column; */
+  /* max-height: 600px; */
+  align-items: flex-start;
+}
+
+.box {
+  width: 220px;
+  height: 300px;
+  background-color: teal;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: center; /* Centraliza horizontalmente */
+  font-size: 24px;
+  color: white;
+  border: 2px solid white;
+  /* border-radius: 8px; */
+  /* flex:1; */ /* Isso faz com que os quadrados cresçam para ocupar o espaço disponível */
+}
+
+/* ---------- Filtros ------------ */
+.filtros h3 {
+  margin-top: 20px;
+  font-size: 16px;
+  border-bottom: 1px solid #555;
+  padding-bottom: 5px;
+}
+
+.filtros ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.filtros li {
+  margin: 8px 0;
+}
+
+.filtros a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-reset {
+  margin-top: 20px;
+  padding: 8px 12px;
+  border: none;
+  background-color: #555;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+
+
+
+
