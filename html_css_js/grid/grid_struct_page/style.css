@@ -1,0 +1,68 @@
+.grid-page {
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 200px 1fr;
+  /* Ajusta a altura do header, main e footer automaticamente */
+  /* Deixa o main ocupando todo o espaço disponível e o header/footer conforme o conteúdo */
+  grid-template-rows: auto 1fr auto;
+  gap: 10px;
+  min-height: 100vh;
+  background-color: #222;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  grid-area: header;
+  background: #444;
+  padding: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #333;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.main {
+  grid-area: main;
+  background: #555;
+  padding: 20px;
+}
+
+.produtos-grid {
+  display: grid;
+  /* Cria colunas automáticas: cada item terá no mínimo 150px
+  e se expandirá igualmente até preencher o espaço disponível */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+}
+
+.produto {
+  background: teal;
+  padding: 20px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+.footer {
+  grid-area: footer;
+  background: #444;
+  text-align: center;
+  padding: 10px;
+}

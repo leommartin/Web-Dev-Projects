@@ -1,0 +1,50 @@
+body {
+  background-color: #222;
+  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.topo {
+  text-align: center;
+  padding: 20px;
+  background-color: #444;
+}
+
+.conteudo {
+  padding: 20px;
+}
+
+.grid-container {
+  padding: 0 15%;
+  display: grid;
+  /* 3 colunas iguais */
+  /* grid-template-columns: repeat(3, 1fr); */
+  /* grid-template-rows: 100px; */
+  /* grid-template-columns: 4fr 3fr 2fr 1fr; */
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 20px; /* espaçamento entre os itens */
+}
+
+.item {
+  background-color: teal;
+  border: 2px solid white;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+  /* height: 5px; */
+}
+
+/* Exemplo de grid com destaque para o primeiro item */
+    /* .item:first-child{
+    grid-column: span 2;
+    grid-row: span 3;
+    }
+    .item:nth-child(5){
+    grid-column: span 2;
+    grid-row: span 3;
+    }
+    .item:nth-child(9){
+    grid-column: span 2;
+    grid-row: span 3;
+    } */
