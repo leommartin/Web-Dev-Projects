@@ -1,0 +1,71 @@
+body {
+  background: #222;
+  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.topo {
+  text-align: center;
+  padding: 20px;
+  background-color: #444;
+}
+
+/* Container principal (main)*/
+.conteudo {
+  padding: 40px;
+  /* display: flex;
+  justify-content: center; */
+}
+
+/* Container filho */
+.grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Centraliza o conteúdo das caixas */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: teal;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.box:hover {
+  transform: scale(1.2);
+  background-color: orange;
+}
+
+.button {
+    background-color: teal;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    height: 60px;
+    /* transition: background-color 0.3s ease; */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button:hover {
+  background-color: #444;
+  color:aquamarine;
+  /* transform: scale(1.0); */
+}
+
+/* moves 100px to the right and return */
+@keyframes mover {
+  0%   { transform: translateX(0);}
+  50%  { transform: translateX(100px);}
+  100% { transform: translateX(0);}
+}
+.box {
+  animation: mover 3s infinite;
+  /* animation: mover 3s 3;  moves 3x and stop */
+}
