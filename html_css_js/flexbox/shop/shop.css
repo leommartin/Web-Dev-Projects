@@ -100,10 +100,6 @@ body {
   text-decoration: none;
 }
 
-/* .filtro[open] .filtro-titulo {
-  background-color: #555;  Exemplo: muda o fundo quando aberto
-} */
-
 /* Remove marcador padrão */
 .filtro summary {
   list-style: none;                /* Remove bolinha do Firefox */

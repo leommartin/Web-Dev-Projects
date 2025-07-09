@@ -63,3 +63,21 @@ btn_mudar_cor.addEventListener("click", () => {
     // The h1 tag still exists, but now with this new content inside
     titulo.innerHTML = "Novo <em>texto</em> com <strong>HTML</strong>";
 })
+
+// Print the input value in real time
+let campo = document.getElementById("meuInput");
+
+campo.addEventListener("input", () => {
+    console.log(campo.value);
+});
+
+// Print the input value after a submtion
+let form = document.getElementById("meuFormulario");
+let input_form = document.getElementById("inputForm");
+
+form.addEventListener("submit", (evento) => {
+    console.log("Formulario enviado!");
+    console.log("Conteúdo: ", input_form.value);
+    evento.preventDefault();
+    
+})
