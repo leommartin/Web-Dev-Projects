@@ -85,7 +85,7 @@ form.addEventListener("submit", (evento) => {
 
 // localStorage.setItem("chave", valor);
 // localStorage.getItem("chave");  // Get the value by key (JSON)
-// localStorage.removeItem("chave"); 
+// localStorage.removeItem("key"); // Remove a specific item
 // localStorage.clear(); // Clean all local storage
 // Converter de objeto para texto: JSON.stringify()
 // Converter de texto para objeto: JSON.parse()
@@ -95,11 +95,17 @@ let btn_salvar_nome = document.getElementById("btnSalvarNome");
 
 // Here, the key is unique. To save more than one name,
 // a different key is necessary.
+
+// localStorage.removeItem("nome"); 
 btn_salvar_nome.addEventListener("click", () => {
     localStorage.setItem("nome", nomePessoa.value);
 
     let nomeSalvo = localStorage.getItem("nome");
-    console.log("Nome salvo no LS: " + nomeSalvo);
+    if (nomeSalvo) {
+        console.log("Nome salvo:", nomeSalvo);
+    } else {
+        console.log("Nenhum nome encontrado.");
+    }
 });
 
 // Using JSON.stringify/JSON.parse to save and retrieve an object
