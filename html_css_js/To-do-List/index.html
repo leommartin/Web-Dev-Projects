@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do List</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>To-do List</h1>
+    </header>
+
+    <main class="container">
+        <table class="listTable">
+            <thead class="table-header">
+                <tr>
+                    <th>#</th>
+                    <th>Nome da tarefa</th>
+                    <th>Dia da Semana</th>
+                    <th>Horário Início</th>
+                    <th>Horário Término</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            
+            <tbody class="table-body">        <!-- Table Body (where tasks go) -->
+                <tr>
+                <td>1</td>                     <!-- Table Data (Cell) -->
+                <td>Estudar JS</td>
+                <td>Quarta</td>
+                <td>14:00</td>
+                <td>16:00</td>
+                <td><button>Remover</button></td>
+                </tr>
+
+                <tr>
+                <td>1</td>                     <!-- Table Data (Cell) -->
+                <td>Estudar JS</td>
+                <td>Quarta</td>
+                <td>14:00</td>
+                <td>16:00</td>
+                <td><button>Remover</button></td>
+                </tr>
+                
+                <tr>
+                <td>1</td>                     <!-- Table Data (Cell) -->
+                <td>Estudar JS</td>
+                <td>Quarta</td>
+                <td>14:00</td>
+                <td>16:00</td>
+                <td><button>Remover</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button id="openAddTaskModal">
+            Adicionar Tarefa
+        </button>
+
+    </main>
+
+    <!-- The modal must be outside of <main> because it is outside the normal flow of the page -->
+    <!-- It will cover the entire page and will not be affected by the table layout -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <!-- Nome da tarefa	Dia da Semana	Horário Início	Horário Término	Ações -->
+            <h1 id="titulo-modal">Adicionar Tarefa</h1>
+            
+            <label>Nome da tarefa</label>
+            <input type="text" placeholder="Estudar JS">
+            
+            <label>Dia da Semana</label>
+            <select>
+                <option value="segunda">Segunda</option>
+                <option value="terca">Terça</option>
+                <option value="quarta">Quarta</option>
+                <option value="quinta">Quinta</option>
+                <option value="sexta">Sexta</option>
+                <option value="sabado">Sábado</option>
+                <option value="domingo">Domingo</option>
+            </select>
+
+            <label>Horário Início</label>
+            <input type="time">
+
+            <label>Horário Término</label>
+            <input type="time">
+
+            <div class="modal-actions">
+                <button id="btnAddTask">Adicionar</button>
+                <button id="closeAddTaskModal">Cancelar</button>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+
+    </main>
+</body>
+</html>
