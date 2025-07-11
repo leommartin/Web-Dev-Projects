@@ -7,6 +7,7 @@
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0fc38180c5.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -34,25 +35,25 @@
                 <td>Quarta</td>
                 <td>14:00</td>
                 <td>16:00</td>
-                <td><button>Remover</button></td>
+                <td><i class="fa-solid fa-trash"></i></td>
                 </tr>
 
                 <tr>
-                <td>1</td>                     <!-- Table Data (Cell) -->
+                <td>2</td>                     <!-- Table Data (Cell) -->
                 <td>Estudar JS</td>
                 <td>Quarta</td>
                 <td>14:00</td>
                 <td>16:00</td>
-                <td><button>Remover</button></td>
+                <td><i class="fa-solid fa-trash"></i></td>
                 </tr>
                 
                 <tr>
-                <td>1</td>                     <!-- Table Data (Cell) -->
+                <td>3</td>                     <!-- Table Data (Cell) -->
                 <td>Estudar JS</td>
                 <td>Quarta</td>
                 <td>14:00</td>
                 <td>16:00</td>
-                <td><button>Remover</button></td>
+                <td><i class="fa-solid fa-trash"></i></td>
                 </tr>
             </tbody>
         </table>
@@ -71,33 +72,29 @@
             <h1 id="titulo-modal">Adicionar Tarefa</h1>
             
             <label>Nome da tarefa</label>
-            <input type="text" placeholder="Estudar JS">
+            <input type="text" id="taskName" placeholder="Digite aqui o nome da tarefa...">
             
             <label>Dia da Semana</label>
-            <select>
-                <option value="segunda">Segunda</option>
-                <option value="terca">Terça</option>
-                <option value="quarta">Quarta</option>
-                <option value="quinta">Quinta</option>
-                <option value="sexta">Sexta</option>
-                <option value="sabado">Sábado</option>
-                <option value="domingo">Domingo</option>
+            <select id="dayOfWeek">
+                <option value="Segunda">Segunda</option>
+                <option value="Terça">Terça</option>
+                <option value="Quarta">Quarta</option>
+                <option value="Quinta">Quinta</option>
+                <option value="Sexta">Sexta</option>
+                <option value="Sábado">Sábado</option>
+                <option value="Domingo">Domingo</option>
             </select>
 
             <label>Horário Início</label>
-            <input type="time">
+            <input type="time" id="startTime">
 
             <label>Horário Término</label>
-            <input type="time">
+            <input type="time" id="endTime">
 
             <div class="modal-actions">
-                <button id="btnAddTask">Adicionar</button>
+                <button id="btnAddTaskModal">Adicionar</button>
                 <button id="closeAddTaskModal">Cancelar</button>
             </div>
-
-
-
-
 
         </div>
     </div>
