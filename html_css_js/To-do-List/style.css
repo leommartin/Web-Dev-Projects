@@ -50,7 +50,8 @@ header{
     /* background-color: #888; */
     border-right: solid 2px rgba(0, 0, 0, 0.5);
     padding: 8px;
-    /* color: white; */
+    /* To do: use | text-decoration: line-through; | after checking the task with status "done" */
+    /* To do: Use classes or change styles. There can be a checkmark (or X when checked) to change the status */
 }
 
 .table-body tr{
@@ -59,7 +60,6 @@ header{
 
 .fa-trash{
     color: rgb(200, 30, 0);
-    padding: 
 }
 
 .fa-trash:hover{
@@ -77,6 +77,26 @@ button{
 button:hover {
     transition: 0.2s ease-in-out;
     transform: scale(1.05);
+}
+
+#openAddTaskModal{
+    background-color: rgb(0, 120, 255);
+    color: white;
+    padding: 5px 14px;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+#openAddTaskModal:hover{
+    background-color: rgb(0, 100, 230);
+    transition: 0.2s ease-in-out;
+}
+
+table th:hover{
+    background-color: rgb(0, 100, 230);
+    color: white;
+    transition: 0.2s ease-in-out;
 }
 
 .modal{
@@ -137,7 +157,7 @@ label {
 }
 
 .modal-actions button{
-    padding: 5px 10px;
+    padding: 3px 10px;
     border: 2px solid rgba(0, 0, 0, 0.5);
     color: white;
     font-weight: bold;
@@ -146,10 +166,19 @@ label {
 }
 
 .modal-actions button:nth-child(1){
-    background-color: rgb(0, 200, 150);
-    
+    background-color: rgb(0, 180, 100);
 }
 .modal-actions button:nth-child(2){
     background-color: rgb(200, 30, 0);
+}
+
+.modal-actions button:nth-child(1):hover{
+    background-color: rgb(0, 150, 100);
+    transition: 0.2s ease-in-out;
+}
+
+.modal-actions button:nth-child(2):hover{
+    background-color: rgb(180, 0, 0);
+    transition: 0.2s ease-in-out;
 }
 
