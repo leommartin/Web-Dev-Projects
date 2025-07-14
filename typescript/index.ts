@@ -110,6 +110,7 @@ const notebook: Produto = {
   preco: 2500
 };
 
+// When should we use 'type'?
 // Combining Types
 type Product = {
   nome: string;
