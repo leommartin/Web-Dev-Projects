@@ -2,17 +2,29 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Mensagem from './components/Mensagem'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+
       <div>
-        <h1> Hello React! </h1>
+        <Header />
+        <p>Este é meu primeiro app em React! </p>
       </div>
+      
+      <div> 
+        {/* Here, we are using the Mensagem component to display messages with props that we pass to it. */}
+        <h1> Exemplo de Props</h1>
+        <Mensagem nome="Leonardo" idade={30} /> 
+        <Mensagem nome="Maria" idade={25} />
 
-
+      </div>
+      <Footer />
 
       {/* <div>
         <a href="https://vite.dev" target="_blank">
@@ -38,4 +50,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
