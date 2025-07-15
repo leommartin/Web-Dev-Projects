@@ -5,6 +5,8 @@ import './App.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Mensagem from './components/Mensagem'
+import Tarefa from './components/Tarefa'
+import Contador from './components/Contador'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,12 +20,22 @@ function App() {
       </div>
       
       <div> 
+
         {/* Here, we are using the Mensagem component to display messages with props that we pass to it. */}
+        {/* App is sending props to Mensagem component, that displays a message with the name and age of the person. */}
         <h1> Exemplo de Props</h1>
         <Mensagem nome="Leonardo" idade={30} /> 
         <Mensagem nome="Maria" idade={25} />
 
       </div>
+
+      <div>
+        <h1> Minhas tarefas </h1>
+        <Tarefa titulo="Prop Tarefa (título)" descricao="Utilizando 'style' para estilizar essa 
+        div dentro de Tarefa.jsx" prioridade="Alta (uma prop genérica)"/>
+      </div>
+
+      <Contador />
       <Footer />
 
       {/* <div>
