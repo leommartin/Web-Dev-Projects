@@ -8,6 +8,9 @@ import Mensagem from './components/Mensagem'
 import Tarefa from './components/Tarefa'
 import Contador from './components/Contador'
 import Formulario from './components/Formulario'
+import ListaDeFrutas from './components/ListaDeFrutas'
+import Tarefas from './components/Tarefas'
+import Login from './components/Login'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -39,6 +42,12 @@ function App() {
       <Contador />
 
       <Formulario />
+
+      <Tarefas />
+
+      <ListaDeFrutas />
+
+      <Login />
       
       <Footer />
 
