@@ -7,6 +7,7 @@ import Footer from './components/Footer'
 import Mensagem from './components/Mensagem'
 import Tarefa from './components/Tarefa'
 import Contador from './components/Contador'
+import Formulario from './components/Formulario'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -36,6 +37,9 @@ function App() {
       </div>
 
       <Contador />
+
+      <Formulario />
+      
       <Footer />
 
       {/* <div>
