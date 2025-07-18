@@ -11,6 +11,8 @@ import Formulario from './components/Formulario'
 import ListaDeFrutas from './components/ListaDeFrutas'
 import Tarefas from './components/Tarefas'
 import Login from './components/Login'
+import Form from './components/Form'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -47,7 +49,9 @@ function App() {
 
       <ListaDeFrutas />
 
-      <Login />
+      {/* <Login /> */}
+
+      <Form />
       
       <Footer />
 
