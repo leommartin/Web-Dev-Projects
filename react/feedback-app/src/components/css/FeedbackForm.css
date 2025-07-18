@@ -38,3 +38,13 @@
     border: #333 solid 1px;
     transform: scale(1.05);
 }
+
+.feedback-item {
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.feedback-item h3, p{
+    margin: 5px;
+}
