@@ -1,0 +1,22 @@
+Um app simples com as seguintes funcionalidades:
+
+Um formulário com campos: nome, nota (1 a 5), comentário;
+
+Lista de feedbacks enviados;
+
+Exibição condicional: se não houver feedback, mostrar uma mensagem;
+
+Botão de “limpar feedbacks”;
+
+Campos somem após submissão (como vimos);
+
+Estilização básica para ficar visualmente agradável.
+
+🧩 Conceitos que vamos praticar
+✅ Componentes e props
+✅ useState para controlar estados dos inputs e da lista
+✅ Eventos (onChange, onClick, onSubmit)
+✅ Renderização condicional (&&, ternário)
+✅ Listas com .map() e key
+✅ Organização de arquivos no React
+✅ Uso de .css com componentes
