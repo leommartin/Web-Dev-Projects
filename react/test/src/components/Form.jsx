@@ -1,11 +1,21 @@
 import {useState} from 'react';
 
+/**
+ * Form component that manages user login state using React hooks.
+ * Allows users to input their name and email to log in, and displays a welcome message upon successful login.
+ * Users can also log out, which resets the form fields.
+ *
+ * @component
+ * @returns {JSX.Element} The rendered form component.
+ */
+
 function Form() {
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [estaLogado, setEstaLogado] = useState(false);
     // 3 state variables: nome, email, estaLogado
 
+    // This function is called when the form is submitted (button is clicked)
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Nome:", nome);
