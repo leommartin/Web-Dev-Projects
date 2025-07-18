@@ -37,6 +37,7 @@ function FeedbackForm()
         <>
 
             {feedbacks.length === 0 && <p>Nenhum feedback enviado ainda.</p>}
+            {feedbacks.length > 0 && <p>Você já enviou {feedbacks.length} feedbacks.</p>}
 
             {/* Using onChange to update the state each time the user types in the input fields. */}
             <form className="feedback-form" onSubmit={handleSubmit}>
