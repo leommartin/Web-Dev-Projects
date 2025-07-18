@@ -8,6 +8,7 @@ function FeedbackForm()
     const [name, setName] = useState("");
     const [rating, setRating] = useState(1);
     const [comment, setComment] = useState("");
+    const [ratingFilter, setRatingFilter] = useState(null);
     const [feedbacks, setFeedback] = useState([]);
 
     // This function will be called when the form is submitted
@@ -37,6 +38,10 @@ function FeedbackForm()
             setComment("");
         }
     }
+
+    const filteredFeedbacks = ratingFilter
+        ? feedbacks.filter(f => f.rating === ratingFilter)
+        : feedbacks;
 
     return(
         <>
@@ -74,7 +79,38 @@ function FeedbackForm()
             </form>
 
             {/* Display the feedbacks rendering a div for each feedback item. */}
-            <FeedbackList feedbacks={feedbacks} />
+            <FeedbackList feedbacks={filteredFeedbacks} />
+
+            {feedbacks.length > 1 && (
+                <div className="filtro">
+                    <p>Filtrar por nota:</p>
+                    {[1, 2, 3, 4, 5].map(nota => (
+                        <button
+                            key={nota}
+                            onClick={() => setRatingFilter(nota)}
+                            style={{
+                                margin: '0 5px',
+                                backgroundColor: ratingFilter === nota ? '#007bff' : '#e0e0e0',
+                                color: ratingFilter === nota ? 'white' : 'black',
+                            }}
+                        >
+                            {nota}
+                        </button>
+                    ))}
+                    {ratingFilter && (
+                        <button
+                            onClick={() => setRatingFilter(null)}
+                            style={{
+                                marginLeft: '10px',
+                                backgroundColor: 'gray',
+                                color: 'white'
+                            }}
+                        >
+                            Limpar filtro
+                        </button>
+                    )}
+                </div>
+            )}
 
         </>
     );
