@@ -21,21 +21,25 @@ function FeedbackForm()
             comment: comment
         };
 
-        // Update the feedbacks state with the new feedback
-        setFeedback([...feedbacks, newFeedback]);
-
-        console.log(newFeedback);
-        console.log(feedbacks);
-
-        // Reset the form fields
-        setName("");
-        setRating(1);
-        setComment("");
+        // Update the feedbacks state with the new feedback if all fields are filled
+        if(!newFeedback.name || !newFeedback.comment || !newFeedback.rating) {
+            alert("Por favor, preencha todos os campos.");
+            return;
+        }
+        else {
+            setFeedback([...feedbacks, newFeedback]);
+            console.log(newFeedback);
+            console.log(feedbacks);
+            
+            // Reset the form fields
+            setName("");
+            setRating(1);
+            setComment("");
+        }
     }
 
     return(
         <>
-
             {feedbacks.length === 0 && <p>Nenhum feedback enviado ainda.</p>}
             {feedbacks.length > 0 && <p>Você já enviou {feedbacks.length} feedbacks.</p>}
 
