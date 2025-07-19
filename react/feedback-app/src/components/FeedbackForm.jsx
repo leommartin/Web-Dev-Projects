@@ -16,9 +16,13 @@ function FeedbackForm()
     function handleSubmit(event) {
         event.preventDefault();
 
+        // There was an error here because e.target.value returns a string.
+        // So, when constructing the filteredFeedbacks array,
+        // 2 !== "2" when comparing 2 (value in feedbacks array) === "2" (value of ratingFilter),
+        // The filter was not working.
         const newFeedback = {
             name: name, 
-            rating: rating,
+            rating: parseInt(rating), // Correction: convert rating to integer
             comment: comment
         };
 
@@ -38,7 +42,9 @@ function FeedbackForm()
             setComment("");
         }
     }
-
+    
+    // If ratingFilter is null, we show all feedbacks
+    // If ratingFilter is set, we filter the feedbacks by the selected rating
     const filteredFeedbacks = ratingFilter
         ? feedbacks.filter(f => f.rating === ratingFilter)
         : feedbacks;
