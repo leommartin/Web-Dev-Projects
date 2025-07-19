@@ -22,3 +22,27 @@ Extra: adicionar filtro por nota
 ✅ Listas com .map() e key
 ✅ Organização de arquivos no React
 ✅ Uso de .css com componentes
+
+------------------------------------ CONTINUA
+
+🔸 Feedback persistente
+Salvar e carregar os feedbacks usando localStorage:
+
+useEffect(() => { ... }, []) para carregar ao abrir a página;
+
+useEffect(() => { ... }, [feedbacks]) para salvar sempre que houver alteração.
+
+🔸 Validação mais amigável
+Exibir mensagens no próprio formulário (sem alert);
+
+Exibir bordas vermelhas ou mensagens de erro abaixo dos inputs.
+
+🔸 Estilização mais elaborada
+Usar classes utilitárias (como Tailwind) ou componentes prontos (como Material UI);
+
+Adicionar ícones ou feedback visual para notas.
+
+🔸 Análise simples (opcional)
+Mostrar média das notas;
+
+Mostrar quantas avaliações por nota (ex: 2 pessoas deram nota 5).
