@@ -51,8 +51,12 @@ function FeedbackForm()
 
     return(
         <>
+
+            <h1 style={{marginBottom: '0px'}}>Avalie!</h1>
+            <h2>Aqui você pode checar avaliações já feitas, ordernar por nota e avaliar!</h2>
             {feedbacks.length === 0 && <p>Nenhum feedback enviado ainda.</p>}
-            {feedbacks.length > 0 && <p>Você já enviou {feedbacks.length} feedbacks.</p>}
+            {feedbacks.length === 1 && <p>Você já enviou {feedbacks.length} feedback.</p>}
+            {feedbacks.length > 1 && <p>Você já enviou {feedbacks.length} feedbacks.</p>}
 
             {/* Using onChange to update the state each time the user types in the input fields. */}
             <form className="feedback-form" onSubmit={handleSubmit}>
