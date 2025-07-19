@@ -15,12 +15,13 @@ function App() {
         cidade: "Rio de Janeiro"
       });
       setLoading(false);
-    }, 2000); // Wait 2 seconds
+    }, 3000); // Wait 3 seconds
 
     // The return of useEffect is a cleanup function (remove the timer if the component unmounts)
     return () => clearTimeout(timer); // Cleanup, good practice to avoid memory leaks
 
   }, []); // Empty dependency array means this effect runs once time after the initial render
+          // In this case, the message will be displayed only once when the component mounts
 
   // Define what will be displayed on the screen
   return (
