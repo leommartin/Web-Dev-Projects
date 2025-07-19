@@ -28,6 +28,9 @@ function App() {
     <div style={{ padding: "2rem", fontFamily: "Arial" }}>
       <h1>Simulador de Carregamento com useEffect</h1>
       {loading ? <Loader /> : <Data dados={dados} />}
+      
+      {/* After 3 seconds, React updates the component and displays the data. */}
+      {/* Any change in state or props causes the component to be re-rendered by React. */}
     </div>
   );
 }
