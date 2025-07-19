@@ -107,9 +107,10 @@ function FeedbackForm()
                         <button
                             onClick={() => setRatingFilter(null)}
                             style={{
-                                marginLeft: '10px',
                                 backgroundColor: 'gray',
-                                color: 'white'
+                                color: 'white',
+                                display:'flex',
+                                marginTop: '10px'
                             }}
                         >
                             Limpar filtro
