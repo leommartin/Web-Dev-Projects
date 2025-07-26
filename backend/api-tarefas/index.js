@@ -1,4 +1,7 @@
+
+
 const express = require('express'); // Import the Express framework
+const logger = require('./middlewares/logger'); // Import the custom logger middleware
 const app = express(); // Initialize the Express application, create the app (server)
 
 // Middleware to parse JSON bodies
@@ -6,6 +9,7 @@ const app = express(); // Initialize the Express application, create the app (se
 // Express.json() is a built-in middleware function in Express
 // This transforms the request body into a JavaScript object
 app.use(express.json());
+app.use(logger);
 
 // 
 let tarefas = []; // Array to store tasks in memory
@@ -45,6 +49,9 @@ app.post('/tarefas', (req, res) => {
         // status 400 indicates a bad request, meaning the client sent invalid data
     }
 
+    if(tarefas.find(t => t.titulo === titulo))
+        return res.status(409).json( {erro: "Título já existe" })
+
     const novaTarefa = {
         id: idAtual++, // Assign a unique ID to the task and increment the ID for the next task
         titulo,
@@ -71,6 +78,23 @@ app.put('/tarefas/:id', (req, res) => {
   if (concluida !== undefined) tarefa.concluida = concluida; // Update the task completion status if provided
 
   res.json(tarefa); // Send the updated task as a JSON response
+});
+
+app.patch('/tarefas/:id/concluir', (req, res) => {
+
+    const { id } = req.params;
+    
+    const tarefa = tarefas.find(t => t.id === parseInt(id));
+    
+    if(!tarefa) {
+        return res.status(404).json({ erro: 'Tarefa não encontrada' });
+    }
+
+    if(!tarefa.concluida) 
+        tarefa.concluida = true;
+
+    res.json(tarefa); // Send the updated task as a JSON response
+
 });
 
 // DELETE: Delete a task by ID
