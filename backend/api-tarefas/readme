@@ -1,0 +1,36 @@
+GET
+Invoke-WebRequest http://localhost:3000/tarefas
+
+POST
+Invoke-WebRequest `
+  -Uri http://localhost:3000/tarefas `
+  -Method POST `
+  -Body '{"titulo": "Estudar Node.js"}' `
+  -ContentType "application/json"
+
+PUT
+
+Invoke-WebRequest `
+  -Uri http://localhost:3000/tarefas/1 `
+  -Method PUT `
+  -Body '{"concluida": true}' `
+  -ContentType "application/json"
+
+Invoke-WebRequest `
+  -Uri http://localhost:3000/tarefas/1 `
+  -Method PUT `
+  -Body '{"titulo": "Estudar mais Node.js"}' `
+  -ContentType "application/json"
+
+Invoke-WebRequest `
+  -Uri http://localhost:3000/tarefas/1 `
+  -Method PUT `
+  -Body '{"titulo":"Novo título","concluida":true}' `
+  -ContentType "application/json"
+
+
+DELETE
+
+Invoke-WebRequest `
+  -Uri http://localhost:3000/tarefas/1 `
+  -Method DELETE
