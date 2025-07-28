@@ -1,8 +1,13 @@
+# 🛠️Studies and Projects Portfolio
+
 Este repositório é um resumo da minha jornada de aprendizado em desenvolvimento web, com anotações, exemplos de código e projetos práticos que cobrem desde os fundamentos do frontend até a criação de APIs com backend em Node.js.
 
-🖊️ HTML & CSS
+### Meus projetos práticos em desenvolvimento
 
-HTML
+- To-do-list Studies: Adaptação de to-do-list focada em estudos.
+- CondoVagas: Aluguel/Reserva de vagas em condomínio.
+
+### 📝 HTML
 
 Estrutura básica de uma página HTML
 
@@ -12,7 +17,7 @@ Formulários: <form>, <input>, <label>, <textarea>, <button>
 
 Listas, links, imagens e tabelas
 
-CSS
+### ✒️ CSS
 
 Seletores e propriedades básicas (cores, margens, fontes, espaçamento)
 
@@ -24,7 +29,7 @@ Media queries (responsividade)
 
 Classes utilitárias
 
-💻 JavaScript (JS)
+### 💻 JavaScript (JS)
 
 Fundamentos
 
@@ -38,13 +43,7 @@ Eventos (click, submit, etc.)
 
 Armazenamento local (localStorage)
 
-Projetos práticos
-
-To-do list com localStorage
-
-Modal com sobreposição e desfoque de fundo
-
-📖 TypeScript (TS)
+### 📖 TypeScript (TS)
 
 Tipagem estática
 
@@ -56,7 +55,7 @@ Tipagem de funções e objetos
 
 Uso com React
 
-⚛️ React (JS/TS)
+### ⚛️ React (JS/TS)
 
 Fundamentos
 
@@ -88,7 +87,7 @@ To-do list com React e localStorage
 
 Separar responsavelmente estado e lógica
 
-🧱 Backend com Node.js + Express
+### 🧱 Backend com Node.js + Express
 
 Conceitos
 
