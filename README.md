@@ -1,11 +1,13 @@
-# 🛠️Studies and Projects Portfolio
+# 🛠️ Portfólio de Estudos e Projetos em Desenvolvimento Web
 
 Este repositório é um resumo da minha jornada de aprendizado em desenvolvimento web, com anotações, exemplos de código e projetos práticos que cobrem desde os fundamentos do frontend até a criação de APIs com backend em Node.js.
 
-### Meus projetos práticos em desenvolvimento
+## Meus projetos práticos em desenvolvimento
 
 - To-do-list Studies: Adaptação de to-do-list focada em estudos.
 - CondoVagas: Aluguel/Reserva de vagas em condomínio.
+
+## Tecnologias e Conteúdos Estudados
 
 ### 📝 HTML
 
