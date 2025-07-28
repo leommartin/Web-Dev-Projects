@@ -11,11 +11,12 @@ Este repositório é um resumo da minha jornada de aprendizado em desenvolviment
 
 Estrutura básica de uma página HTML
 
-Tags principais: <header>, <main>, <footer>, <section>, <article>, etc.
+Tags principais: &lt;header&gt;, &lt;main&gt;, &lt;footer&gt;, &lt;section&gt;, &lt;article&gt;, etc.
 
-Formulários: <form>, <input>, <label>, <textarea>, <button>
+Formulários: &lt;form&gt;, &lt;input&gt;, &lt;label&gt;, &lt;textarea&gt;, &lt;button&gt;
 
 Listas, links, imagens e tabelas
+
 
 ### ✒️ CSS
 
