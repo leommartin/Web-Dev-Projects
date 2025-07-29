@@ -2,6 +2,16 @@
 // Array to store tasks
 let tasks = [];
 
+const diasSemana = {
+    "Segunda": 1,
+    "Terça": 2,
+    "Quarta": 3,
+    "Quinta": 4,
+    "Sexta": 5,
+    "Sábado": 6,
+    "Domingo": 7
+}
+
 function loadTasks() {
     const storedTasks = localStorage.getItem("tarefas");
     if (storedTasks) {
@@ -16,8 +26,30 @@ function saveTasks() {
     localStorage.setItem("tarefas", JSON.stringify(tasks));
 }
 
+function horaParaMinutos(horaStr){
+    const [h, m] = horaStr.split(":").map(Number);
+    // Why use map? Because it converts the string to a number
+    return h * 60 + m; // Convert hours to minutes and add minutes
+}
+
 function renderTable() {
     tbody.innerHTML = "";
+
+    // Sort tasks by day and start time
+    tasks.sort((a, b) => {
+        const dayA = diasSemana[a.day];
+        const dayB = diasSemana[b.day];
+    
+        if(dayA !== dayB) {
+           return dayA - dayB;
+        }
+        else if (horaParaMinutos(a.start) === horaParaMinutos(b.start)) {
+            return horaParaMinutos(a.end) -  horaParaMinutos(b.end);
+        } else {
+            return horaParaMinutos(a.start) - horaParaMinutos(b.start);
+        }
+    })
+
     tasks.forEach((task, index) => {
         let row = document.createElement("tr");
         row.innerHTML = `
