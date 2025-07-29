@@ -39,7 +39,10 @@ function renderTable() {
     tasks.sort((a, b) => {
         const dayA = diasSemana[a.day];
         const dayB = diasSemana[b.day];
-    
+        
+        // Check if days are the same
+        // If they are the same, check the start time
+        // If they are the same, check the end time
         if(dayA !== dayB) {
            return dayA - dayB;
         }
