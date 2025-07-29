@@ -84,12 +84,6 @@ Lifting state up
 
 Passar funções como props
 
-Projetos
-
-To-do list com React e localStorage
-
-Separar responsavelmente estado e lógica
-
 ### 🧱 Backend com Node.js + Express
 
 Conceitos
@@ -129,7 +123,5 @@ Separar rotas, controladores e middlewares
 Projeto: API de Tarefas
 
 CRUD completo em memória
-
-Filtros de tarefas concluídas e não concluídas
 
 Middleware de log
