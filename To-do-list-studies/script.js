@@ -2,15 +2,16 @@
 // Array to store tasks
 let tasks = [];
 
-const diasSemana = {
-    "Segunda": 1,
-    "Terça": 2,
-    "Quarta": 3,
-    "Quinta": 4,
-    "Sexta": 5,
-    "Sábado": 6,
-    "Domingo": 7
-}
+const diasSemana = [
+  { nome: "Segunda", valor: 1 },
+  { nome: "Terça", valor: 2 },
+  { nome: "Quarta", valor: 3 },
+  { nome: "Quinta", valor: 4 },
+  { nome: "Sexta", valor: 5 },
+  { nome: "Sábado", valor: 6 },
+  { nome: "Domingo", valor: 7 }
+];
+
 
 function loadTasks() {
     const storedTasks = localStorage.getItem("tarefas");
@@ -32,13 +33,20 @@ function horaParaMinutos(horaStr){
     return h * 60 + m; // Convert hours to minutes and add minutes
 }
 
+// Function to return the value of the respective day
+function getValorDoDia(dia) {
+    const diaObj = diasSemana.find(d => d.nome === dia);
+    return diaObj ? diaObj.valor : 0; // return 0 if day is not found
+}
+
+
 function renderTable() {
     tbody.innerHTML = "";
 
     // Sort tasks by day and start time
     tasks.sort((a, b) => {
-        const dayA = diasSemana[a.day];
-        const dayB = diasSemana[b.day];
+        const dayA = getValorDoDia(a.day);
+        const dayB = getValorDoDia(b.day);
         
         // Check if days are the same
         // If they are the same, check the start time
@@ -65,6 +73,61 @@ function renderTable() {
         `;
         tbody.appendChild(row);
     });
+
+
+    const containerTabelas = document.querySelector("#tabelasPorDia");
+    containerTabelas.innerHTML = "";
+    containerTabelas.classList.add("table-body");
+
+    diasSemana.forEach(({nome}) => {
+        const tarefasDoDia = tasks.filter(task => task.day === nome);
+
+        if(tarefasDoDia.length > 0) {
+
+            // Create a section with a title (day of the week)
+            const section = document.createElement("section");
+            const title = document.createElement("h2");
+            title.textContent = nome;
+            section.appendChild(title);
+
+            // Create the table and fields
+            const table = document.createElement("table");
+            table.classList.add("listTable");
+
+            const thead = `
+                <thead class="table-header">
+                    <tr>
+                    <th>#</th>
+                    <th>Nome da tarefa</th>
+                    <th>Início</th>
+                    <th>Término</th>
+                    <th>Ações</th>
+                    </tr>
+                </thead>
+            `;
+
+            const tbodyDia = document.createElement("tbody");
+            
+            // Iterate over the tasks and list each one
+            tarefasDoDia.forEach((task, index) => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>${task.name}</td>
+                    <td>${task.start}</td>
+                    <td>${task.end}</td>
+                    <td><i class="fa-solid fa-trash" data-index="${tasks.indexOf(task)}"></i></td>
+                `;
+                tbodyDia.appendChild(row); // All <tr> elements are children of tbody
+            });
+
+            table.innerHTML = thead;
+            table.appendChild(tbodyDia);
+            section.appendChild(table);
+
+            containerTabelas.appendChild(section);
+        }
+    })
 }
 
 let btnAddTask = document.getElementById("openAddTaskModal");
