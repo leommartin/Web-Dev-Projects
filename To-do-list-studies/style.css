@@ -6,7 +6,7 @@ body, button, input, select{
     font-family: 'Poppins', sans-serif;
 }
 
-header{
+header {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -24,8 +24,9 @@ header{
     align-items: center;
     text-align:center;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
 }
+
 
 .listTable{
     border: solid 3px rgba(0, 0, 0, 0.5);
@@ -79,17 +80,22 @@ button:hover {
     transform: scale(1.05);
 }
 
-#openAddTaskModal{
+.btn-action{
     background-color: rgb(0, 120, 255);
     color: white;
     padding: 5px 14px;
     border: none;
     border-radius: 3px;
     font-weight: bold;
+    min-width:200px;
 }
 
-#openAddTaskModal:hover{
-    background-color: rgb(0, 100, 230);
+.add-task{
+    background-color: rgb(0, 180, 100);
+}
+
+.add-task:hover{
+    background-color: rgb(0, 150, 100);
     transition: 0.2s ease-in-out;
 }
 
@@ -97,6 +103,38 @@ table th:hover {
     background-color: rgb(0, 100, 230);
     color: white;
     transition: 0.2s ease-in-out;
+}
+
+.title-dias{
+    /* font-size: 2em; */
+    color: rgb(0, 140, 255);
+    text-align: center;
+    margin-top: 50px;
+    
+    /* Option 1: Using text-shadow to create border */
+    text-shadow: 
+        -1px -2px 0 #f0f0f0,
+        1px -1px 0 #f0f0f0,
+        -1px 2px 0 #f0f0f0,
+        1px 1px 0 #f0f0f0;
+
+}
+
+.hidden{
+    display: none;
+}
+/* Estilo base do container de tabelas */
+#tabelasPorDia {
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+/* Quando visível */
+#tabelasPorDia.expandido {
+  max-height: 3000px; /* Coloque um valor grande suficiente */
+  opacity: 1;
 }
 
 .modal{
@@ -186,12 +224,13 @@ label {
 /* Days */
 
 #tabelasPorDia section {
-    margin-top: 30px;
-    padding: 10px;
+    padding: 10px 50px;
     /* background-color: rgba(255, 255, 250, 0.9); */
     /* border: 2px solid rgba(0, 140, 255, 0.2); */
     border-radius: 8px;
-    /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3),
+                0 -2px 4px rgba(0, 0, 0, 0.3);
+    margin: 20px;
 }
 
 #tabelasPorDia h2 {
@@ -206,6 +245,7 @@ label {
 #tabelasPorDia table {
     width: 100%;
     max-width: 800px;
+    margin: 10px;
     /* margin: 0 auto; */
 }
 

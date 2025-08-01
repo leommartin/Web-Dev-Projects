@@ -130,6 +130,23 @@ function renderTable() {
     })
 }
 
+const toggleBtn = document.getElementById("toggleTabelasPorDia");
+const tabelasDiv = document.getElementById("tabelasPorDia");
+const titleDias = document.querySelector(".title-dias");
+
+// Ocultar por padrão
+titleDias.classList.add("hidden");
+
+toggleBtn.addEventListener("click", () => {
+  tabelasDiv.classList.toggle("expandido");
+  titleDias.classList.toggle("hidden");
+
+  toggleBtn.textContent = tabelasDiv.classList.contains("expandido")
+    ? "Ocultar Tabelas por Dia"
+    : "Mostrar Tabelas por Dia";
+
+});
+
 let btnAddTask = document.getElementById("openAddTaskModal");
 let modalAddTask = document.getElementById("myModal");
 
