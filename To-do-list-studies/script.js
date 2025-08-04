@@ -62,14 +62,25 @@ function renderTable() {
 
     tasks.forEach((task, index) => {
         let row = document.createElement("tr");
+
         row.innerHTML = `
             <td>${index + 1}</td>
             <td>${task.name}</td>
             <td>${task.day}</td>
             <td>${task.start}</td>
             <td>${task.end}</td>
-            <td class="icons"><i class="fa-solid fa-trash" data-index="${index}"></i><i class="fa-solid fa-clipboard-check" data-index="${index}"></i></i></td>
+            <td class="icons">
+                <i class="fa-solid fa-trash" data-index="${index}"></i>
+                <i class="fa-solid fa-clipboard-check" data-index="${index}"></i>
+            </td>
         `;
+
+        if (task.completed) {
+            row.querySelectorAll("td:not(.icons)").forEach(td => {
+                td.classList.add("task-completed");
+            });
+        }
+        
         tbody.appendChild(row);
     });
 
@@ -115,7 +126,10 @@ function renderTable() {
                     <td>${task.name}</td>
                     <td>${task.start}</td>
                     <td>${task.end}</td>
-                    <td class="icons"><i class="fa-solid fa-trash" data-index="${index}"></i><i class="fa-solid fa-clipboard-check" data-index="${index}"></i></i></td>
+                    <td class="icons">
+                        <i class="fa-solid fa-trash" data-index="${index}"></i>
+                        <i class="fa-solid fa-clipboard-check" data-index="${index}"></i>
+                    </td>
 
                 `;
                 tbodyDia.appendChild(row); // All <tr> elements are children of tbody
@@ -223,6 +237,24 @@ tbody.addEventListener("click", (event) => {
     if(event.target.classList.contains("fa-trash")) {
         const index = event.target.getAttribute("data-index");
         tasks.splice(index, 1); // Remove the task from the array
+        saveTasks();
+        renderTable();
+    }
+});
+
+tbody.addEventListener("click", (event) => {
+
+    // Verify if the clicked element is a trash icon (has class "fa-trash")
+    if(event.target.classList.contains("fa-clipboard-check")) {
+        const index = event.target.getAttribute("data-index");
+        console.log("Task completed:", tasks[index]);
+
+        // Search the <tr> element that contains the clicked icon
+        // const row = event.target.closest("tr");
+        // row.classList.toggle("task-completed"); // Toggle the completed class
+
+        tasks[index].completed = !tasks[index].completed;
+
         saveTasks();
         renderTable();
     }

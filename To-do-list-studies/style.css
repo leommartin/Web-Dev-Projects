@@ -70,6 +70,11 @@ header {
     border: 2px solid rgba(153, 153, 153, 0.1);;
 }
 
+td.task-completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
 .icons {
     display: flex;
     justify-content: center;
