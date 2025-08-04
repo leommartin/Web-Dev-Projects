@@ -62,10 +62,19 @@ header {
     /* To do: use | text-decoration: line-through; | after checking the task with status "done" */
     /* To do: Use classes or change styles. There can be a checkmark (or X when checked) to change the status */
 }
-
+.table-body td:last-child{
+    border-right: none;
+}
 
 .table-body tr{
     border: 2px solid rgba(153, 153, 153, 0.1);;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .fa-trash{
@@ -75,7 +84,17 @@ header {
 .fa-trash:hover{
     color: rgb(255, 0, 0);
     transition: 0.3s ease-in-out;
-    transform: scale(1.2);
+    /* transform: scale(1.1); */
+    cursor: pointer;
+}
+
+.fa-clipboard-check{
+    color: rgb(0, 180, 100);
+}
+
+.fa-clipboard-check:hover{
+    color: rgb(0, 220, 100);
+    transition: 0.3s ease-in-out;
     cursor: pointer;
 }
 

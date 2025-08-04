@@ -12,7 +12,6 @@ const diasSemana = [
   { nome: "Domingo", valor: 7 }
 ];
 
-
 function loadTasks() {
     const storedTasks = localStorage.getItem("tarefas");
     if (storedTasks) {
@@ -69,7 +68,7 @@ function renderTable() {
             <td>${task.day}</td>
             <td>${task.start}</td>
             <td>${task.end}</td>
-            <td><i class="fa-solid fa-trash" data-index="${index}"></i></td>
+            <td class="icons"><i class="fa-solid fa-trash" data-index="${index}"></i><i class="fa-solid fa-clipboard-check" data-index="${index}"></i></i></td>
         `;
         tbody.appendChild(row);
     });
@@ -116,7 +115,8 @@ function renderTable() {
                     <td>${task.name}</td>
                     <td>${task.start}</td>
                     <td>${task.end}</td>
-                    <td><i class="fa-solid fa-trash" data-index="${tasks.indexOf(task)}"></i></td>
+                    <td class="icons"><i class="fa-solid fa-trash" data-index="${index}"></i><i class="fa-solid fa-clipboard-check" data-index="${index}"></i></i></td>
+
                 `;
                 tbodyDia.appendChild(row); // All <tr> elements are children of tbody
             });
