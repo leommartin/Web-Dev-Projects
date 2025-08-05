@@ -132,6 +132,12 @@ function renderTable() {
                     </td>
 
                 `;
+
+                if (task.completed) {
+                    row.querySelectorAll("td:not(.icons)").forEach(td => {
+                        td.classList.add("task-completed");
+                    });
+                }
                 tbodyDia.appendChild(row); // All <tr> elements are children of tbody
             });
 
@@ -257,6 +263,48 @@ tbody.addEventListener("click", (event) => {
 
         saveTasks();
         renderTable();
+    }
+});
+
+document.getElementById("tabelasPorDia").addEventListener("click", (event) => {
+    
+    // Check if the clicked element is a trash icon or check icon
+    const isTrash = event.target.classList.contains("fa-trash");
+    const isCheck = event.target.classList.contains("fa-clipboard-check");
+
+    if (isTrash || isCheck) {
+        // Get the index of the task from the clicked icon
+        // using the data-index attribute
+        const index = event.target.getAttribute("data-index");
+        
+        // Get the day from the closest section element
+        // that contains the clicked icon
+        // and the <h2> element with the day name
+        const day = event.target.closest("section")?.querySelector("h2")?.textContent;
+
+        if (!day || index === null) return;
+
+        // Filter tasks to find the task for the specific day
+        const tarefasDoDia = tasks.filter(task => task.day === day);
+        const tarefaAlvo = tarefasDoDia[index];
+        
+        // Find the global position of the task in the tasks array
+        // This returns the index of the task in the global tasks array
+        const posicaoGlobal = tasks.findIndex(t => t === tarefaAlvo);
+
+        // The global position is important to remove the task or toggle the completed status
+        if (posicaoGlobal !== -1) {
+            if (isTrash) {
+                tasks.splice(posicaoGlobal, 1);
+                // Remove the task from the global tasks array
+            } else if (isCheck) {
+                tasks[posicaoGlobal].completed = !tasks[posicaoGlobal].completed;
+                // !tasks... // Toggle the completed status of the task
+            }
+
+            saveTasks();
+            renderTable();
+        }
     }
 });
 
