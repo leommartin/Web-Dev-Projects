@@ -1,0 +1,46 @@
+body{
+    background-color: aquamarine;
+}
+
+body, button, input, select{
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(255, 255, 250, 0.85);
+    padding: 10px;
+    color: rgba(0, 140, 255, 1);
+    border-radius: 2px;
+}
+
+.container{
+    padding: 30px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+button {
+    border-radius:1px;
+    cursor:pointer;
+}
+
+button:hover {
+    transition: 0.2s ease-in-out;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+

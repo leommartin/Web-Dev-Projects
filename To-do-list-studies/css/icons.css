@@ -1,0 +1,31 @@
+/* ====== Icons ====== */
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* === Trash icon */
+.fa-trash{
+    color: rgb(200, 30, 0);
+}
+
+.fa-trash:hover{
+    color: rgb(255, 0, 0);
+    transition: 0.3s ease-in-out;
+    /* transform: scale(1.1); */
+    cursor: pointer;
+}
+
+/* === Check icon */
+.fa-clipboard-check{
+    color: rgb(0, 180, 100);
+}
+
+.fa-clipboard-check:hover{
+    color: rgb(0, 220, 100);
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
