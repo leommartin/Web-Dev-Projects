@@ -162,8 +162,8 @@ toggleBtn.addEventListener("click", () => {
   titleDias.classList.toggle("hidden");
 
   toggleBtn.textContent = tabelasDiv.classList.contains("expandido")
-    ? "Ocultar Tabelas por Dia"
-    : "Mostrar Tabelas por Dia";
+    ? "Ocultar Tarefas por Dia"
+    : "Mostrar Terafas por Dia";
 
 });
 
