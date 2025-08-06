@@ -42,6 +42,13 @@ export function setupModal(tasks) {
 
     btnAddTaskModal.addEventListener("click", () => {
 
+        if(tasks.length === 1) {
+            if(tasks[0].name === "Tarefa Exemplo") {
+                tasks.shift(); // Remove the default task if it exists
+            }
+            saveTasks(tasks); // Save the updated tasks to localStorage
+        }
+
         const task = {
             name: taskName.value,
             day: selectDay.value,
@@ -53,7 +60,7 @@ export function setupModal(tasks) {
 
             // Add the new task to the tasks array
             tasks.push(task);
-            saveTasks(tasks);
+            saveTasks(tasks); // Save the updated tasks to localStorage
             renderTable(tasks);
             limparModal();
 

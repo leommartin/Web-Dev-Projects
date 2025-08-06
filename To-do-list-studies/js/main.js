@@ -3,6 +3,23 @@ import { renderTable } from './render.js';
 import { setupModal } from './modal.js';
 
 let tasks = loadTasks(); // Load tasks from localStorage
+console.log("Tasks loaded from localStorage:", tasks);
+
+if (tasks.length === 0) { 
+
+    console.log("No tasks found in localStorage. Initializing with default task.");
+    console.log("Tasks length: " + tasks.length);
+    // If no tasks are found, initialize with a default task
+    const task = {
+        name: "Tarefa Exemplo",
+        day: "Segunda",
+        start: "08:00",
+        end: "10:00",
+        completed: false
+    };
+    tasks.push(task);
+} 
+
 renderTable(tasks);      // Render tasks on the screen
 setupModal(tasks);       // Activate modal events
 
