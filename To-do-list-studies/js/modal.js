@@ -6,7 +6,7 @@ import { renderTable } from './render.js';
 export function setupModal(tasks) {
     const modalAddTask = document.getElementById("myModal");
     const btnAddTask = document.getElementById("openAddTaskModal");
-    const btnCloseModal = document.getElementById("closeAddTaskModal");
+    const btnCloseModal = document.getElementById("btnCloseAddTaskModal");
     const btnAddTaskModal = document.getElementById("btnAddTaskModal");
 
     const taskName = document.getElementById("taskName");
