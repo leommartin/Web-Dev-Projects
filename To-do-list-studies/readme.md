@@ -53,9 +53,9 @@ To-do-list/
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/to-do-list.git
+   git clone https://github.com/leommmartin/Projects.git
    ```
-2. Abra o arquivo `index.html` no navegador.
+2. Acesse o diretório `To-do-list-studies` e abra o arquivo `index.html` no navegador.
    (Não é necessário instalar nada.)
 
 ### 🔒 Observações
