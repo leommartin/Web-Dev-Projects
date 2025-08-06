@@ -52,9 +52,9 @@ To-do-list/
 ### 🧪 Como testar
 
 1. Clone o repositório:
-
+   ```bash
    git clone https://github.com/seu-usuario/to-do-list.git
-
+   ```
 2. Abra o arquivo `index.html` no navegador.
    (Não é necessário instalar nada.)
 
