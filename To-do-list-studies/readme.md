@@ -31,6 +31,7 @@ Uma aplicação web interativa para organização de tarefas semanais. O projeto
 
 ### 📁 Estrutura do projeto
 
+```
 To-do-list/
 ├── index.html
 ├── style/
@@ -46,6 +47,7 @@ To-do-list/
 │   ├── storage.js      # Interação com localStorage
 │   └── utils.js        # Funções auxiliares (ex: ordenação, dias da semana)
 └── README.md
+```
 
 ### 🧪 Como testar
 
@@ -69,6 +71,6 @@ To-do-list/
 
 ### 👤 Autor
 
-Feito por **\[Leonardo Marin Mendes Martin]**
+Feito por **\Leonardo Marin Mendes Martin**
 [LinkedIn](www.linkedin.com/in/leonardo-marin-mendes-martin-9555271a3) • [GitHub](https://github.com/leommartin)
 
