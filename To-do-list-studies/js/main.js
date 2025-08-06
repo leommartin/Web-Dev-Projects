@@ -23,20 +23,21 @@ if (tasks.length === 0) {
 renderTable(tasks);      // Render tasks on the screen
 setupModal(tasks);       // Activate modal events
 
-const toggleBtn = document.getElementById("toggleTabelasPorDia");
+const toggleTabelasPorDia = document.getElementById("toggleTabelasPorDia");
 const tabelasDiv = document.getElementById("tabelasPorDia");
 const titleDias = document.querySelector(".title-dias");
 
 // Hide the title "Tabelas por Dia da Semana" by default
 titleDias.classList.add("hidden");
 
-toggleBtn.addEventListener("click", () => {
+toggleTabelasPorDia.addEventListener("click", () => {
+
+    if(tasks.length === 0) return; // Do nothing if there are no tasks
 
     tabelasDiv.classList.toggle("expandido");   // Toggle tables visibility
-    titleDias.classList.toggle("hidden");       // Toggle title visibility
 
     // Update button text based on current state
-    toggleBtn.textContent = tabelasDiv.classList.contains("expandido")
+    toggleTabelasPorDia.textContent = tabelasDiv.classList.contains("expandido")
         ? "Ocultar Tarefas por Dia"
         : "Mostrar Tarefas por Dia";
 });
