@@ -32,22 +32,34 @@ document.addEventListener("click", (event) => {
 
     if (!isTrash && !isCheck) return;
 
+    if(isTrash) console.log("Delete task");
+    if(isCheck) console.log("Toggle task completion");
+
     // Get the task id and day from data attributes
     const index = event.target.getAttribute("data-index");
     const day = event.target.closest("section")?.querySelector("h2")?.textContent;
 
-    if (!day || index === null) return;
+    let posicaoGlobal;
 
-    // Get tasks of the specific day and find the target task
-    const tarefasDoDia = tasks.filter(task => task.day === day);
-    const tarefaAlvo = tarefasDoDia[index];
+    // If day or index is not found, exit the functions
+    // if (!day || index === null) return;
+    
+    if(day) {
+        
+        // Get tasks of the specific day and find the target task
+        const tarefasDoDia = tasks.filter(task => task.day === day);
+        const tarefaAlvo = tarefasDoDia[index];
 
-    // Find the global index of the target task
-    const posicaoGlobal = tasks.findIndex(t => t === tarefaAlvo);
+        // Find the global index of the target task
+        posicaoGlobal = tasks.findIndex(t => t === tarefaAlvo);
+    } else
+    {
+        posicaoGlobal = index;
+    }   
 
+    // If posicaoGlobal has a valid index, proceed with deletion or toggling completion
     if (posicaoGlobal !== -1) {
 
-        // Delete or toggle completion based on the clicked icon
         if (isTrash) {
             tasks.splice(posicaoGlobal, 1);
         } else if (isCheck) {
