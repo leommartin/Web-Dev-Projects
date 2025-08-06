@@ -46,9 +46,6 @@ To-do-list/
 │   ├── storage.js      # Interação com localStorage
 │   └── utils.js        # Funções auxiliares (ex: ordenação, dias da semana)
 └── README.md
-```
-
----
 
 ### 🧪 Como testar
 
