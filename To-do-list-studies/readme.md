@@ -67,10 +67,10 @@ To-do-list/
 
 * Filtro por tarefa concluída
 * Tema escuro
-* Adicionar descrição as tarefas (no cadastro e ao clicar em uma célula)
+* Adicionar descrição as tarefas (no cadastro e ao clicar em uma célula com o nome da tarefa)
 
 ### 👤 Autor
 
-Feito por **\Leonardo Marin Mendes Martin**
+Feito por **Leonardo Marin Mendes Martin**
 [LinkedIn](www.linkedin.com/in/leonardo-marin-mendes-martin-9555271a3) • [GitHub](https://github.com/leommartin)
 
