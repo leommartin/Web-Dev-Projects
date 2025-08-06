@@ -72,5 +72,5 @@ To-do-list/
 ### 👤 Autor
 
 Feito por **Leonardo Marin Mendes Martin**
-[LinkedIn](www.linkedin.com/in/leonardo-marin-mendes-martin-9555271a3) • [GitHub](https://github.com/leommartin)
+[LinkedIn](https://www.linkedin.com/in/leonardo-marin-mendes-martin-9555271a3) • [GitHub](https://github.com/leommartin)
 
