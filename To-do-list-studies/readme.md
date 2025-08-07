@@ -65,6 +65,7 @@ To-do-list/
 
 ### 📌 Próximos passos (ideias)
 
+* Responsividade 
 * Filtro por tarefa concluída
 * Tema escuro
 * Adicionar descrição as tarefas (no cadastro e ao clicar em uma célula com o nome da tarefa)
