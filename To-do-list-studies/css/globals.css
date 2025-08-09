@@ -32,10 +32,7 @@ button {
     cursor:pointer;
 }
 
-button:hover {
-    transition: 0.2s ease-in-out;
-    transform: scale(1.05);
-}
+
 
 
 
