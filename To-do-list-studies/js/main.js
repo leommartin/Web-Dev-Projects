@@ -1,6 +1,6 @@
 import { loadTasks, saveTasks } from "./storage.js";
 import { renderTable } from './render.js';
-import { setupModal } from './modal.js';
+import { setupModal, updateTaskCountMessage } from './modal.js';
 
 let tasks = loadTasks(); // Load tasks from localStorage
 console.log("Tasks loaded from localStorage:", tasks);
@@ -21,6 +21,7 @@ if (tasks.length === 0) {
 } 
 
 renderTable(tasks);      // Render tasks on the screen
+updateTaskCountMessage(tasks); // Update task count message on initial load
 setupModal(tasks);       // Activate modal events
 
 const toggleTabelasPorDia = document.getElementById("toggleTabelasPorDia");
@@ -85,6 +86,8 @@ document.addEventListener("click", (event) => {
         }
 
         saveTasks(tasks);
+        updateTaskCountMessage(tasks);
         renderTable(tasks);
+
     }
 });

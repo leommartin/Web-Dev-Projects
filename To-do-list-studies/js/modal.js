@@ -3,6 +3,16 @@
 import { saveTasks } from './storage.js';
 import { renderTable } from './render.js';
 
+export function updateTaskCountMessage(tasks) {
+    const taskCountMessage = document.getElementById("taskCountMessage");
+    if (tasks.length === 0) {
+        taskCountMessage.textContent = "Nenhuma tarefa cadastrada.";
+    }
+    else {
+        taskCountMessage.textContent = `Você tem ${tasks.length} tarefa${tasks.length > 1 ? 's' : ''} cadastrada${tasks.length > 1 ? 's' : ''}.`;
+    }
+}
+
 export function setupModal(tasks) {
     const modalAddTask = document.getElementById("myModal");
     const btnAddTask = document.getElementById("openAddTaskModal");
@@ -62,6 +72,7 @@ export function setupModal(tasks) {
             tasks.push(task);
             saveTasks(tasks); // Save the updated tasks to localStorage
             renderTable(tasks);
+            updateTaskCountMessage(tasks); // Update task count message
             limparModal();
 
             // Close the modal after adding the task
