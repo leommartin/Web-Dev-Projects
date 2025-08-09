@@ -30,6 +30,13 @@
         width: 5px;;
         margin: 0 1px;
     }
+
+    #taskCountMessage {
+        font-size: 0.8em;
+        align-self: normal;
+        padding: 0;
+        margin: 0;
+    }
     
     /* === Container Adjustments === */
     .container {
@@ -139,7 +146,8 @@
     
     /* === Tables por Dia Adjustments === */
     #tabelasPorDia section {
-        padding: 5px 15px;
+        padding: 5px 10px;
+        /* padding-left: 2px; */
         margin: 10px 5px;
         width: 370px;
     }
@@ -151,6 +159,7 @@
     #tabelasPorDia table {
         font-size: 0.8em;
         max-width: 100%;
+        margin: 0;
     }
     
     .title-dias {
