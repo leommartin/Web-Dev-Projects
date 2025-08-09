@@ -1,0 +1,196 @@
+/* ====== General Button Fix (all screen sizes) ====== */
+#toggleTabelasPorDia {
+    min-width: 220px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ====== Mobile Responsivity (up to 450px) ====== */
+
+@media screen and (max-width: 450px) {
+    
+    /* === Header Fixes === */
+    header {
+        width: 100%;
+        min-width: 100%;
+        box-sizing: border-box;
+        padding: 8px;
+        margin: 0;
+    }
+    
+    header h1 {
+        font-size: 1.5em;
+        margin: 0;
+        word-wrap: break-word;
+    }
+
+    .fa-trash, .fa-clipboard-check {
+        width: 5px;;
+        margin: 0 1px;
+    }
+    
+    /* === Container Adjustments === */
+    .container {
+        padding: 10px 5px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    /* === Table Fixes === */
+    .listTable {
+        width: 100%;
+        min-width: unset;
+        font-size: 0.6em;
+        border-collapse: collapse;
+        margin-bottom: 5%;
+    }
+    
+    /* Remove min-width from table headers and make them flexible */
+    .table-header th {
+        max-width: 10px;
+        width: auto;
+        padding: 6px 4px;
+        font-size: 1em;
+        word-wrap: break-word;
+        white-space: normal;
+    }
+    
+    /* Specific column widths for mobile */
+
+    .table-header th{ /* # */
+        width: 10%;
+        min-width: 20px;
+    }
+
+    .table-header th:first-child, .table-header th:last-child{ /* # */
+        width: 5%;
+        min-width: 20px;
+    }
+    
+    .table-header th:nth-child(2) { /* Nome da tarefa */
+        width: 15%;
+        min-width: unset !important;
+    } 
+
+    /* Table body adjustments */
+    .table-body td {
+        padding: 4px 2px;
+        font-size: 1.0em;
+        word-wrap: break-word;
+        white-space: normal;
+        overflow-wrap: break-word;
+        min-height: 20px;
+    }
+    
+    /* === Button Fixes === */
+    .btn-action {
+        min-width: unset;
+        width: 100%;
+        max-width: 220px;
+        padding: 3px 6px;
+        font-size: 0.8em;
+    }
+    
+    /* Fix for toggle button size when text changes */
+    #toggleTabelasPorDia {
+        width: 220px !important;
+        min-width: 220px;
+        max-width: 220px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    /* === Modal Adjustments === */
+    .modal-content {
+        width: 95%;
+        max-width: 380px;
+        padding: 15px 20px;
+        top: 37%;
+    }
+    
+    .modal-content h1 {
+        font-size: 1.3em;
+        margin-bottom: 15px;
+    }
+    
+    .modal-content label {
+        font-size: 1em;
+    }
+    
+    .modal-content input,
+    .modal-content select {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .modal-actions button {
+        width: 100%;
+        padding: 8px;
+    }
+    
+    /* === Tables por Dia Adjustments === */
+    #tabelasPorDia section {
+        padding: 5px 15px;
+        margin: 10px 5px;
+        width: 370px;
+    }
+    
+    #tabelasPorDia h2 {
+        font-size: 1.3em;
+    }
+    
+    #tabelasPorDia table {
+        font-size: 0.8em;
+        max-width: 100%;
+    }
+    
+    .title-dias {
+        font-size: 1.5em;
+        margin-top: 30px;
+        padding: 0 10px;
+    }
+    
+    /* === Icon Adjustments === */
+    .fa-clipboard-check,
+    .fa-pen,
+    .fa-trash {
+        font-size: 1.2em;
+        margin: 0 1px;
+    }
+    
+    /* === Body padding fix === */
+    body {
+        margin: 0;
+        padding: 0;
+        min-width: 100%;
+        min-height:100%;
+        overflow-x: hidden;
+    }
+}
+
+/* ====== Extra small screens (up to 350px) ====== */
+@media screen and (max-width: 350px) {
+    
+    /* Adjust toggle button for very small screens */
+    #toggleTabelasPorDia {
+        min-width: 180px !important;
+        width: 180px !important;
+        max-width: 180px !important;
+        font-size: 0.75em;
+        padding: 6px 4px;
+    }
+    
+    .btn-action {
+        max-width: 180px;
+        font-size: 0.75em;
+    }
+}
