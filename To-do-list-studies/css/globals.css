@@ -32,10 +32,15 @@ button {
     cursor:pointer;
 }
 
-button:hover {
-    transition: 0.2s ease-in-out;
-    transform: scale(1.05);
+#taskCountMessage {
+    align-self: end;
+    margin: 0;
+    margin-right: 5%;
+    font-size: 1em;
+    font-weight: 501;
 }
+
+
 
 
 
