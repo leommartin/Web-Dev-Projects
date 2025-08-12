@@ -58,7 +58,7 @@ To-do-list/
 2. Acesse o diretório `To-do-list-studies` e abra o arquivo `index.html` no navegador.
    (Não é necessário instalar nada.)
 
-Você também pode visitar [minha página](https://www.inf.ufpr.com/lmmm20). Lá estão publicados alguns dos projetos que estou desenvolvendo, e que atualizo com frequência. A versão mais recente você encontra aqui.
+Você também pode visitar [minha página](https://www.inf.ufpr.br/lmmm20). Lá estão publicados alguns dos projetos que estou desenvolvendo, e que atualizo com frequência. A versão mais recente você encontra aqui.
 
 ### 🔒 Observações
 
