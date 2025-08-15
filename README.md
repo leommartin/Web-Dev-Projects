@@ -7,6 +7,9 @@ Este repositório é um resumo da minha jornada de aprendizado em desenvolviment
 - To-do-list Studies: Adaptação de to-do-list focada em estudos.
 - CondoVagas: Aluguel/Reserva de vagas em condomínio.
 
+**Nota:** No momento, estou focado nos estudos de banco de dados para aprimorar o projeto e expandir suas funcionalidades no futuro.
+Por isso, o desenvolvimento poderá ficar temporariamente pausado.
+
 ## Tecnologias e Conteúdos Estudados
 
 ### 📝 HTML
