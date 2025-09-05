@@ -58,6 +58,8 @@ To-do-list/
 2. Acesse o diretório `To-do-list-studies` e abra o arquivo `index.html` no navegador.
    (Não é necessário instalar nada.)
 
+Você também pode visitar <a href="https://www.inf.ufpr.br/lmmm20" target="_blank">meu portfólio</a>. Lá estão publicados alguns dos projetos que estou desenvolvendo e que atualizo com frequência, além de algumas informações sobre mim. Entretanto, a versão mais recente você encontra aqui.
+
 ### 🔒 Observações
 
 * Este projeto **não possui backend**. Todos os dados são armazenados **localmente no navegador** via `localStorage`.
