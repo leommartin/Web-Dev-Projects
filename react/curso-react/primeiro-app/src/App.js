@@ -1,24 +1,20 @@
 // import logo from './logo.svg';
 // import './App.css';
 
+import Nome from './components/Nome';
+
 function App() {
   return (
     <div className="App">
       <h1> Bem vindo ao meu projeto!</h1>
-      <Nome/>
+      <Nome aluno="Lucas" idade="22"/>
       <br/>
-      <Nome/>
+      <Nome aluno="Jose Silva" idade="30"/>
     </div>
   );
 }
 
 
-// Criando um componente Nome
-function Nome(){
-  return(
-    <span>Bem-vindo: Matheus</span>
-  )
-}
 
 
 export default App;
