@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 // import './App.css';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function App() {
 
@@ -11,6 +11,24 @@ function App() {
   ]);
   const [input, setInput] = useState('');
 
+  useEffect(() => {
+    
+    // Verifica as tarefas salvas no localStorage 
+    const tarefasStorage = localStorage.getItem('@tarefa');
+
+    // Se tiver tarefas no localStorage, carrega elas no estado
+    if(tarefasStorage){
+      setTarefas(JSON.parse(tarefasStorage))
+    }
+
+  }, []);
+
+  // Salva as tarefas no localStorage sempre que o estado "tarefas" for alterado
+  useEffect(() => {
+
+    localStorage.setItem('@tarefa', JSON.stringify(tarefas));
+    
+  }, [tarefas]);
 
   function handleRegister(e){
     e.preventDefault();
