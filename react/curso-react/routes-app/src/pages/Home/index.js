@@ -9,7 +9,9 @@ function Home() {
       <span>Sujeito Programador</span> <br/> <br/>
 
       <Link to="/sobre"> Sobre </Link> <br/>
-      <Link to="/contato"> Contato </Link>
+      <Link to="/contato"> Contato </Link> <br/>
+
+      <Link to="/produto/12345"> Acesar Produto 12345 </Link>
     </div>
   );
 }
