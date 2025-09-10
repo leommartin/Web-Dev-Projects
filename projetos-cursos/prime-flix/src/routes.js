@@ -11,7 +11,7 @@ function RoutesApp() {
             <Routes>
 
                 <Route path="/" element={ <Home/> } />
-                <Route path="/filme" element={ <Filme/> } />
+                <Route path="/filme/:id" element={ <Filme/> } />
 
                 <Route path="*" element={ <Erro/> } />
 
@@ -21,3 +21,6 @@ function RoutesApp() {
 }
 
 export default RoutesApp;
+
+// https://api.themoviedb.org/3/movie/now_playing?api_key=5c0ea9a2cb10f51220d40a633eecb9ee
+// https://api.themoviedb.org/3/movie/now_playing?api_key=5c0ea9a2cb10f51220d40a633eecb9ee&language=pt-br
