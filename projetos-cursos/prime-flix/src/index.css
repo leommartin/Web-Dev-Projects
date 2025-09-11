@@ -4,3 +4,7 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+
+body{
+  background-color: rgba(65, 65, 65, 0.678);
+}
