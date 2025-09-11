@@ -6,9 +6,10 @@ Este repositório é um resumo da minha jornada de aprendizado em desenvolviment
 
 - To-do-list Studies: Adaptação de to-do-list focada em estudos.
 - CondoVagas: Aluguel/Reserva de vagas em condomínio.
+- Alguns projetos de cursos podem ser vistos [aqui](https://github.com/leommartin/HTML-CSS-JS) 
 
-**Nota:** No momento, estou focado nos estudos de banco de dados para aprimorar o projeto e expandir suas funcionalidades no futuro.
-Por isso, o desenvolvimento poderá ficar temporariamente pausado.
+**Status:** No momento, estou realizando um curso com React, Node, Typescript e React Native para conhecer mais sobre as ferramentas e conseguir produzir projetos mais robustos.
+Por isso, o desenvolvimento dos projetos poderá ficar temporariamente pausado ou avançar em um ritmo um pouco mais lento.
 
 ## Tecnologias e Conteúdos Estudados
 
