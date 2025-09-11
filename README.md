@@ -5,7 +5,7 @@ Este repositório é um resumo da minha jornada de aprendizado em desenvolviment
 ## Meus projetos práticos em desenvolvimento
 
 - To-do-list Studies: Adaptação de to-do-list focada em estudos.
-- CondoVagas: Aluguel/Reserva de vagas em condomínio.
+- CondoVagas: Aluguel/Reserva de vagas em condomínio. (fase de elaboração)
 - Alguns projetos de cursos podem ser vistos [aqui](https://github.com/leommartin/HTML-CSS-JS) 
 
 **Status:** No momento, estou realizando um curso com React, Node, Typescript e React Native para conhecer mais sobre as ferramentas e conseguir produzir projetos mais robustos.
