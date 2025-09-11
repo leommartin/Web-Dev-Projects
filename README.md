@@ -4,7 +4,7 @@ Este repositório é um resumo da minha jornada de aprendizado em desenvolviment
 
 ## Meus projetos práticos em desenvolvimento
 
-- To-do-list Studies: Adaptação de to-do-list focada em estudos. [preview (está desatulizada com o git)](https://www.inf.ufpr.br/lmmm20/To-do-list-studies)
+- To-do-list Studies: Adaptação de to-do-list focada em estudos. [preview (está desatualizada com o git)](https://www.inf.ufpr.br/lmmm20/To-do-list-studies)
   
   => A ideia para este projeto surgiu a partir de uma necessidade pessoal: eu sentia falta de uma aplicação que oferecesse uma visualização prática e abrangente das tarefas ao longo de uma semana.
 O objetivo inicial era organizar meus horários de estudo e compromissos de forma simples e direta, permitindo visualizar toda a semana apenas rolando a página com o mouse.
@@ -21,6 +21,8 @@ Essa abordagem oferece uma visão mais ampla e fluida das tarefas, diferenciando
 
 **Status:** No momento, estou realizando um curso com React, Node, Typescript e React Native para me aprofundar nas ferramentas e conseguir produzir projetos mais robustos.
 Por isso, o desenvolvimento dos projetos poderá ficar temporariamente pausado ou avançar em um ritmo um pouco mais lento.
+
+**Nota:** Existem alguns outros projetos de cursos que fiz que não estão no GitHub.
 
 ## Tecnologias e Conteúdos Estudados
 
