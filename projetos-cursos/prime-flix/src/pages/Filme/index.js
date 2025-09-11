@@ -5,7 +5,8 @@ import api from '../../services/api';
 function Filme() {
 
     const { id } = useParams();
-    
+    const [filme, setFilme] = ({});
+    const [loading, setLoading] = (true);
 
     // como acessar o objeto filme pelo id?
 
@@ -18,27 +19,40 @@ function Filme() {
                 }
             })
             .then( (response) => { // response tem detalhes de config, data, headers, etc...
-                console.log(response.data); // os atributos que queremos estão em .data (id, nome, etc)
+                // console.log(response.data); // os atributos que queremos estão em .data (id, nome, etc)
+                setFilme(response.data);
+                setLoading(false);
             })
             .catch( () => {
                 console.log("Filme não encontrado");
             })
-       }
+        }
 
-       loadFilme();
+        loadFilme();
+
+        return () => {
+            console.log("Componente foi desmontado");
+        }
 
     }, []);
 
+    if(loading) {
+        return(
+            <div>
+                <h1>Carregando detalhes do filme...</h1>
+            </div>            
+        )   
+    }
+
     return (
-        <div>
-            <h1>Página com detalhes do filme: {id} </h1>
-            {/* <article>
-                
-                <img src="" alt="" />
-                <h3>Sinopse</h3>
+        <div className="filme-info">
+            <h1>{filme.title}</h1>
+            <img src={`https://image.tmdb.org/t/p/original${filme.backdrop_path}`} alt={filme.title} ></img>
+            
+            <h3>Sinopse</h3>
+            <span>{filme.overview}</span>
 
-
-            </article> */}
+            <strong>Avaliação:{filme.vote_average} / 10</strong>
         </div>
     )
 }
