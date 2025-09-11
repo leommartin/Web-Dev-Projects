@@ -55,13 +55,23 @@ Fundamentos
 
 Variáveis (let, const)
 
-Funções, condicionais, loops
+Funções, condicionais, loops, switch
+
+Arrays, objetos, dicionários
+
+Operações em listas(map, filter, forEach), funções anônimas
+
+Date, timers, manipulação de strings
+
+Desconstrução, spread operator, rest operator
 
 Manipulação do DOM
 
 Eventos (click, submit, etc.)
 
 Armazenamento local (localStorage)
+
+ 
 
 ### 📖 TypeScript (TS)
 
@@ -100,6 +110,10 @@ Componentes Pai e Filho
 Lifting state up
 
 Passar funções como props
+
+Links e Rotas(react-router-dom)
+
+Uso de fetch, axios para consumir APIs
 
 ### 🧱 Backend com Node.js + Express
 
