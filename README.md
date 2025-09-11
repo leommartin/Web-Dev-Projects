@@ -4,11 +4,22 @@ Este repositório é um resumo da minha jornada de aprendizado em desenvolviment
 
 ## Meus projetos práticos em desenvolvimento
 
-- To-do-list Studies: Adaptação de to-do-list focada em estudos.
+- To-do-list Studies: Adaptação de to-do-list focada em estudos. [preview (está desatulizada com o git)](https://www.inf.ufpr.br/lmmm20/To-do-list-studies)
+  
+  => A ideia para este projeto surgiu a partir de uma necessidade pessoal: eu sentia falta de uma aplicação que oferecesse uma visualização prática e abrangente das tarefas ao longo de uma semana.
+O objetivo inicial era organizar meus horários de estudo e compromissos de forma simples e direta, permitindo visualizar toda a semana apenas rolando a página com o mouse.
+Essa abordagem oferece uma visão mais ampla e fluida das tarefas, diferenciando-se das to-do lists tradicionais.
+  
 - CondoVagas: Aluguel/Reserva de vagas em condomínio. (fase de elaboração)
-- Alguns projetos de cursos podem ser vistos [aqui](https://github.com/leommartin/HTML-CSS-JS) 
+  
+  => Este projeto surgiu de um problema real que enfrento no condomínio onde moro. O grupo de WhatsApp local recebe muitas mensagens de pessoas oferecendo serviços ou vendendo produtos, o que acaba dificultando tanto para quem quer pedir uma vaga emprestada por curtos    períodos de tempo quanto para quem busca ou oferece vagas para aluguel.
 
-**Status:** No momento, estou realizando um curso com React, Node, Typescript e React Native para conhecer mais sobre as ferramentas e conseguir produzir projetos mais robustos.
+  Com isso em mente, a proposta é que moradores que estejam com suas vagas livres possam disponibilizá-las temporariamente no site, permitindo que outros as reservem até um horário definido, tornando o processo simples e organizado.
+  Além disso, a plataforma permitiria conectar quem precisa de uma vaga com quem tem uma disponível para alugar, possibilitando que ambos negociem o valor e estabeleçam uma relação ganha-ganha.
+
+- Alguns outros projetos de cursos podem ser vistos [aqui](https://github.com/leommartin/HTML-CSS-JS) 
+
+**Status:** No momento, estou realizando um curso com React, Node, Typescript e React Native para me aprofundar nas ferramentas e conseguir produzir projetos mais robustos.
 Por isso, o desenvolvimento dos projetos poderá ficar temporariamente pausado ou avançar em um ritmo um pouco mais lento.
 
 ## Tecnologias e Conteúdos Estudados
