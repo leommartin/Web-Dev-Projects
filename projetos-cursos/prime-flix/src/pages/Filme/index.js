@@ -1,12 +1,13 @@
 import {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
 import api from '../../services/api';
+import './filme.css';
 
 function Filme() {
 
     const { id } = useParams();
-    const [filme, setFilme] = ({});
-    const [loading, setLoading] = (true);
+    const [filme, setFilme] = useState({});
+    const [loading, setLoading] = useState(true);
 
     // como acessar o objeto filme pelo id?
 
@@ -39,7 +40,7 @@ function Filme() {
     if(loading) {
         return(
             <div>
-                <h1>Carregando detalhes do filme...</h1>
+                <h1 className="filme-info">Carregando detalhes do filme...</h1>
             </div>            
         )   
     }
@@ -53,6 +54,16 @@ function Filme() {
             <span>{filme.overview}</span>
 
             <strong>Avaliação:{filme.vote_average} / 10</strong>
+
+            <div className="area-buttons">
+                <button>Salvar</button>
+                <button>
+                    <a href="#">
+                        Ver Trailer
+                    </a>
+                </button>
+
+            </div>
         </div>
     )
 }
