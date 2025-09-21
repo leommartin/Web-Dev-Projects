@@ -1,0 +1,6 @@
+
+commands:
+
+yarn init -y 
+yarn add express
+node index.js
