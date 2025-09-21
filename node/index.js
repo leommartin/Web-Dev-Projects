@@ -9,16 +9,20 @@ const server = express();
 // req => dados da requisição(queryParam, routeParams, body)
 // res => dados da resposta (o que eu vou devolver para o frontend/usuário)
 
+// Query params = /?nome=NodeJS
+// Route Params = /curso/2
+// Request Body = { nome: 'Nodejs', tipo: 'Backend' }
+
 server.get('/curso', (req, res) => {
+
+    const nome = req.query.nome;
+    
+
+    // res.json = enviar uma resposta em json
+    return res.json( { curso : `Aprendendo ${nome}` } );
 
     // res.send = enviar uma resposta
     // return res.send('Hello World');
-
-    // res.json = enviar uma resposta em json
-    // feat: create 'curso' route, send response
-    return res.json( { curso : 'Node.js' } );
-
-
     console.log('Acessou a rota!')
 
 })
