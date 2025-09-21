@@ -13,16 +13,21 @@ const server = express();
 // Route Params = /curso/2
 // Request Body = { nome: 'Nodejs', tipo: 'Backend' }
 
-server.get('/curso/:id', (req, res) => {
+const cursos = ['NodeJS', 'JavaScript', 'React Native'];
 
-    const id = req.params.id;
+// localhost:3000/curso/2
+server.get('/curso/:index', (req, res) => {
+
+    // const id = req.params.id;
     // const nome = req.query.nome;
-    
+    const { index } = req.params; // desestruturação com parâmetro da rota (único)
 
     // res.json = enviar uma resposta em json
     // return res.json( { curso : `Aprendendo ${nome}` } );
-    return res.json( { curso : `Curso: ${id}` } );
+    // return res.json( { curso : `Curso: ${id}` } );
+    return res.json(cursos[index]);
 
+    // "pré-definido" em ingles é ´pre
 
     // res.send = enviar uma resposta
     // return res.send('Hello World');
