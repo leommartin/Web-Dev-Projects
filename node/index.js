@@ -13,13 +13,16 @@ const server = express();
 // Route Params = /curso/2
 // Request Body = { nome: 'Nodejs', tipo: 'Backend' }
 
-server.get('/curso', (req, res) => {
+server.get('/curso/:id', (req, res) => {
 
-    const nome = req.query.nome;
+    const id = req.params.id;
+    // const nome = req.query.nome;
     
 
     // res.json = enviar uma resposta em json
-    return res.json( { curso : `Aprendendo ${nome}` } );
+    // return res.json( { curso : `Aprendendo ${nome}` } );
+    return res.json( { curso : `Curso: ${id}` } );
+
 
     // res.send = enviar uma resposta
     // return res.send('Hello World');
