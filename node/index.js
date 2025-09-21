@@ -18,6 +18,8 @@ const cursos = ['NodeJS', 'JavaScript', 'React Native'];
 // localhost:3000/curso/2
 server.get('/curso/:index', (req, res) => {
 
+
+
     // const id = req.params.id;
     // const nome = req.query.nome;
     const { index } = req.params; // desestruturação com parâmetro da rota (único)
