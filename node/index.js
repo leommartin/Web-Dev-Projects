@@ -13,7 +13,7 @@ server.use(express.json());
 // res => dados da resposta (o que eu vou devolver para o frontend/usuário)
 
 // Query params = /?nome=NodeJS
-// Route Params = /curso/2
+// Route Params = /curso/2 === ('/curso/:id')
 // Request Body = { nome: 'Nodejs', tipo: 'Backend' } (vem da requisição JSON)
 
 const cursos = ['NodeJS', 'JavaScript', 'React Native'];
