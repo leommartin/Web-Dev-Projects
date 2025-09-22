@@ -5,6 +5,9 @@ const express = require ('express');
 // Criar o servidor
 const server = express();
 
+// Permitir que o servidor entenda JSON
+server.use(express.json());
+
 // Criar uma rota /curso
 // req => dados da requisição(queryParam, routeParams, body)
 // res => dados da resposta (o que eu vou devolver para o frontend/usuário)
@@ -15,10 +18,17 @@ const server = express();
 
 const cursos = ['NodeJS', 'JavaScript', 'React Native'];
 
+// ----- Read -----
+
+// Listar todos os cursos
+server.get('/cursos', (req, res) => {
+    
+    // Retornar cursos em formato JSON
+    return res.json(cursos);
+});
+
 // localhost:3000/curso/2
-server.get('/curso/:index', (req, res) => {
-
-
+server.get('/cursos/:index', (req, res) => {
 
     // const id = req.params.id;
     // const nome = req.query.nome;
@@ -28,8 +38,6 @@ server.get('/curso/:index', (req, res) => {
     // return res.json( { curso : `Aprendendo ${nome}` } );
     // return res.json( { curso : `Curso: ${id}` } );
     return res.json(cursos[index]);
-
-    // "pré-definido" em ingles é ´pre
 
     // res.send = enviar uma resposta
     // return res.send('Hello World');
