@@ -70,5 +70,21 @@ server.put('/cursos/:index', (req, res) => {
     return res.json(cursos);
 });
 
+// ----- Delete -----
+// Excluindo algum curso
+server.delete('/cursos/:index', (req, res) => {
+
+    const {index} = req.params;
+
+    let nome_curso = cursos[index];
+    cursos.splice(index, 1);
+
+    // return res.send();
+    // return res.json(cursos);
+    return res.json({ message: `O curso ${nome_curso} foi deletado com sucesso!` });
+});
+
 // Colocar o servidor para rodar
 server.listen(3000);
+
+// feat: delete course by index, show message with 
