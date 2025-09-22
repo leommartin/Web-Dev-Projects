@@ -57,5 +57,18 @@ server.post('/cursos', (req, res) => {
     return res.json(cursos);
 });
 
+// ----- Update -----
+
+// Alterar um curso
+server.put('/cursos/:index', (req, res) => {
+
+    const { index } = req.params;
+    const {name} = req.body;
+
+    cursos[index] = name;
+
+    return res.json(cursos);
+});
+
 // Colocar o servidor para rodar
 server.listen(3000);
