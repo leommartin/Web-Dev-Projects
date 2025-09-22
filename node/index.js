@@ -18,6 +18,38 @@ server.use(express.json());
 
 const cursos = ['NodeJS', 'JavaScript', 'React Native'];
 
+// Middleware global
+server.use((req, res, next) => {
+
+    console.log(`Acessou a rota: ${req.url}`);
+    return next();
+});
+
+// Middleware local, verifica se o nome do curso foi enviado no body corretamente
+function checkNomeCurso(req, res, next) {
+
+    if(!req.body.name) {
+        return res.status(400).json({ error: "Nome do curso é obrigatório" });
+    }
+
+    return next();
+}
+
+// Middleware local, verifica se o índice do curso que foi enviado existe
+function checkIndexCurso(req, res, next) {
+    
+    const nome_curso = cursos[req.params.index];
+
+    if(!nome_curso) {
+        return res.status(400).json({ error: "O curso não existe" });
+    }
+
+    // Poderiamos criar um atributo novo na requisição e usar em outras rotas (ex: get)
+    // req.curso = nome_curso;
+
+    return next();
+}
+
 // ----- Read -----
 
 // Listar todos os cursos
@@ -28,7 +60,7 @@ server.get('/cursos', (req, res) => {
 });
 
 // localhost:3000/curso/2
-server.get('/cursos/:index', (req, res) => {
+server.get('/cursos/:index', checkIndexCurso, (req, res) => {
 
     // const id = req.params.id;
     // const nome = req.query.nome;
@@ -38,6 +70,8 @@ server.get('/cursos/:index', (req, res) => {
     // return res.json( { curso : `Aprendendo ${nome}` } );
     // return res.json( { curso : `Curso: ${id}` } );
     return res.json(cursos[index]);
+    
+    // return res.json(req.curso)
 
     // res.send = enviar uma resposta
     // return res.send('Hello World');
@@ -48,7 +82,7 @@ server.get('/cursos/:index', (req, res) => {
 // ----- Create -----
 
 // Adicionar um novo curso
-server.post('/cursos', (req, res) => {
+server.post('/cursos', checkNomeCurso, (req, res) => {
     
     // JSON já vem com "name" : "valor"
     const { name } = req.body;
@@ -60,10 +94,10 @@ server.post('/cursos', (req, res) => {
 // ----- Update -----
 
 // Alterar um curso
-server.put('/cursos/:index', (req, res) => {
+server.put('/cursos/:index', checkNomeCurso, checkIndexCurso, (req, res) => {
 
     const { index } = req.params;
-    const {name} = req.body;
+    const { name } = req.body;
 
     cursos[index] = name;
 
@@ -72,7 +106,7 @@ server.put('/cursos/:index', (req, res) => {
 
 // ----- Delete -----
 // Excluindo algum curso
-server.delete('/cursos/:index', (req, res) => {
+server.delete('/cursos/:index', checkIndexCurso, (req, res) => {
 
     const {index} = req.params;
 
