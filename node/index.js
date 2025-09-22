@@ -45,5 +45,17 @@ server.get('/cursos/:index', (req, res) => {
 
 })
 
+// ----- Create -----
+
+// Adicionar um novo curso
+server.post('/cursos', (req, res) => {
+    
+    // JSON já vem com "name" : "valor"
+    const { name } = req.body;
+    cursos.push(name);
+
+    return res.json(cursos);
+});
+
 // Colocar o servidor para rodar
 server.listen(3000);
