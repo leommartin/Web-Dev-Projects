@@ -1,17 +1,16 @@
 
-import { Router, Request, Response } from 'express';
+// import { Router, Request, Response } from 'express'; Request e Response são usados no controller
+import { Router } from 'express';
+
+
+import { CreateUserController } from './controllers/user/createUserController';
 
 const router = Router();
 
-router.get('/teste', (req: Request, res: Response) => {
-    
-    // return res.json({ nome: 'Sujeito Pizza' });
 
-    // imprime 'error: Erro ao fazer essa requisição');
-    // throw new Error('Erro ao fazer essa requisição');
+// -- Rotas de Usuários
 
-    return res.json({ nome: 'Matheus'});
-
-});
+// -- Rota de criação de usuário 
+router.post('/users', new CreateUserController().handle);
 
 export { router };
