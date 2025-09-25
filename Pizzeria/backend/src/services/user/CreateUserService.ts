@@ -1,6 +1,5 @@
 import prismaClient from '../../prisma';
 
-
 interface UserRequest {
     name: string;
     email: string;
