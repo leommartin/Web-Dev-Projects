@@ -4,6 +4,8 @@ import { CreateUserService } from '../../services/user/CreateUserService';
 // Controller: Recebe a requisição, envia pro serviço e devolve uma resposta
 
 class CreateUserController {
+
+    // Método handle: Recebe a requisição (Request) e devolve uma resposta (Response)
     async handle(req: Request, res: Response) {
 
         // Dados que vem na requisição
