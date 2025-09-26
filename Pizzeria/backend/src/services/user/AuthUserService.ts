@@ -1,5 +1,6 @@
 import prismaClient from "../../prisma";
-import  {hash, compare} from 'bcryptjs';
+import { compare } from 'bcryptjs';
+import { sign } from 'jsonwebtoken';
 
 interface AuthRequest {
     email: string;
@@ -29,9 +30,32 @@ class AuthUserService {
             throw new Error("User/Password incorrect");
         }
 
-        // gerar um token JWT e devolver os dados do usuário como id, nome e email
+        // Se deu tudo certo, vamos gerar o token para o usuário
+        const token = sign( {
+            // Por que name, email? -> Dados que quero guardar no token
+            // Esses dados podem ser lidos por qualquer um que tenha o token
+            name: user.name,
+            email: user.email
+        },
+        process.env.JWT_SECRET,{ 
+            // JWT_SECRET -> Variável de ambiente que guarda a chave secreta para gerar o token
+            // process.env.JWT_SECRET -> Chave secreta para autenticar o token
+            // O que isso faz? Gera um hash único para cada usuário
+            // Assim, mesmo que dois usuários tenham o mesmo nome e email, os tokens serão diferentes
+            // Pois a chave secreta é única e privada (só o servidor conhece)
+            // Isso aumenta a segurança do token
+            
+            // subject -> Quem é o dono desse token? (ID do usuário)
+            subject: user.id,
+            expiresIn: '30d' // Tempo de expiração do token
+        })
 
-        return { ok: true }; 
+        return { 
+            id: user.id,
+            name: user.name,
+            email: user.email,
+            token: token           
+        }; 
     }
 }
 
