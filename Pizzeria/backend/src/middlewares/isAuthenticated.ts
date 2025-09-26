@@ -35,6 +35,9 @@ export function isAuthenticated(req: Request, res: Response, next: NextFunction)
         ) as PayLoad;
 
         console.log("user id:", sub);
+
+        // Recuperar o id do usuário e colocar dentro de uma NOVA VARIÁVEL user_id dentro do req.
+        req.user_id = sub;
         
         // Continua a execução
         return next();
