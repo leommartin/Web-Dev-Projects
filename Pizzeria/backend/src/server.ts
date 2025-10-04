@@ -2,7 +2,8 @@ import express, { Request, Response, NextFunction } from 'express'
 // import 'express-async-errors';
 import cors from 'cors';
 
-import { router } from './routes'
+import { router } from './routes';
+import path from 'path';
 
 // Cria uma instância do Express
 const app = express();
@@ -12,6 +13,13 @@ app.use(express.json());
 app.use(cors());
 
 app.use(router);
+
+// Middleware: quando acessar /files, pode acessar a foto colocando o nome dela
+// Exemplo: /files/6e1b585ad4e42f937d18b1c5e916ecdb-calabresa.png
+app.use(
+    '/files',
+    express.static(path.resolve(__dirname, '..', 'tmp'))
+)
 
 // Todas as rotas passam por esse Middleware
 // Trata erros no Express, captura qualquer erro lançado em rotas/middlewares anteriores
